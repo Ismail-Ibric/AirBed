@@ -1,82 +1,112 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Header from "../comps/Header";
+import Footer from "../comps/Footer";
+import Banner from "../comps/Banner";
+import CardSml from "../comps/CardSml";
+import CardMed from "../comps/CardMed";
+import CardLrg from "../comps/CardLrg";
 
-export default function Home() {
+export default function Home(props) {
+  const { exploreData, cardsData } = props;
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Sleep Inns</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="//db.onlinewebfonts.com/c/fa6fb08b2ef2e7c6c1cb626ff35fe3f0?family=Last+to+sleep"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <link
+          href="//db.onlinewebfonts.com/c/0801c08e5412f54e4b4e9ad146d83a12?family=Ink+Free"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <link
+          href="//db.onlinewebfonts.com/c/96996b95c19ecf8733387b6c0b2311e3?family=Rossetti"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <link
+          href="//db.onlinewebfonts.com/c/02408ccd8efcf169db4e41d6e0551118?family=NeueKabelW01-Regular"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <link
+          href="//db.onlinewebfonts.com/c/1412bea64d9ba801365a8a4b8c6ee782?family=BlogScriptW00-Regular"
+          rel="stylesheet"
+          type="text/css"
+        />
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+      <Header />
+      <Banner />
+      <main className="max-w-7xl mx-auto px-4 sm:px-8">
+        <section className="mt-4">
+          <div className="flex justify-center">
+            <span className="font-sleep text-4xl font-semibold">
+              Explore Nearby
+            </span>
+          </div>
+          <span
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+            lg:grid-cols-4 xl:grid-cols-5"
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+            {exploreData?.map((item, key) => (
+              <CardSml
+                key={key}
+                img={item.img}
+                location={item.location}
+                distance={item.distance}
+              />
+            ))}
+          </span>
+        </section>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+        <section className="mt-4">
+          <div className="flex justify-center mb-2">
+            <span className="font-sleep text-4xl font-semibold">
+              Stay Anywhere
+            </span>
+          </div>
+          <div className="flex p-2 space-x-3 overflow-scroll scrollbar-hide">
+            {cardsData?.map( (item, key) => (
+              <CardMed
+                key={key}
+                img={item.img}
+                title={item.title}
+              />
+            ))}
+          </div>
+        </section>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <CardLrg
+          img="https://links.papareact.com/4cj"
+          title="The Great Outdoors"
+          description="Wishlist curated by AirBnB"
+          buttonText="Get Some Rest"
+        />
+        
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+      <Footer />
     </div>
-  )
+  );
+}
+
+export async function getStaticProps() {
+  const exploreData = await fetch("https://links.papareact.com/pyp").then(
+    (res) => res.json()
+  );
+
+  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
+    res.json()
+  );
+
+  return {
+    props: {
+      exploreData,
+      cardsData,
+    },
+  };
 }
