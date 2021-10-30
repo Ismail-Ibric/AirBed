@@ -111,8 +111,8 @@ function Header(props) {
               />
             </div>
             <div className="flex justify-center space-x-4 bg-white py-3 rounded-bl-lg rounded-br-lg">
-              <button className="rounded bg-red-100 p-1">Close</button>
-              <button className="rounded bg-red-400 p-1" onClick={(e) => search()}>Search</button>
+              <button className="rounded bg-red-100 p-1 hover:shadow-md hover:scale-105 active:scale-100" onClick={() => setInputVal("")}>Close</button>
+              <button className="rounded bg-red-400 p-1 hover:shadow-md hover:scale-105 active:scale-100" onClick={(e) => search()}>Search</button>
             </div>
           </div>
         </div>
