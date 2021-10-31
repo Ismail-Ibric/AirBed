@@ -44,12 +44,13 @@ function Header(props) {
 
   return (
     <div className="sticky top-0 w-full h-14 z-50 -mb-14">
-      <header className="relative grid grid-cols-3 shadow-md py-2 px-2">
-        <div className="absolute top-0 z-n100 w-full h-14 bg-black opacity-40"></div>
+      <header className="relative flex shadow-md py-2 px-2">
+        <div className="absolute top-0 left-0 z-n100 w-full h-14 bg-black opacity-40"></div>
         {/* <img className="absolute z-n100 w-full h-full bg-stars opacity-25" /> */}
-        <div className="relative flex item-center h-10 w-15 my-auto" onClick={(e) => router.push("/")}>
+        <div className="flex item-center h-10 w-15 pr-1 my-auto"
+          onClick={(e) => router.push("/")}>
           <Image
-            className="cursor-pointer"
+            className="cursor-pointer hover:scale-102 active:scale-100"
             src="/SleepInns-Opt.svg"
             //layout="fill"
             //objectFit="contain"
@@ -59,7 +60,8 @@ function Header(props) {
           />
         </div>
 
-        <div className="flex items-center border-2 rounded-full shadow-md bg-gray-100">
+        <div className="flex w-full max-w-sm sm:max-w-md items-center
+          border-2 rounded-full shadow-md bg-gray-100 ml-auto mr-auto">
           <input
             type="text"
             className="bg-gray-100 ml-3 mr-3 w-full outline-none focus:bg-red-100"
@@ -67,7 +69,11 @@ function Header(props) {
             value={inputVal}
             onChange={(event) => setInputVal(event.target.value)}
           />
-          <SearchIcon className="hidden md:inline-flex h-8 w-8 bg-red-400 rounded-full -ml-2 p-1 text-white cursor-pointer hover:shadow-md hover:scale-105 active:scale-100" />
+          <SearchIcon className="hidden md:inline-flex h-8 w-8
+            bg-red-400 rounded-full -ml-2 p-1 text-white cursor-pointer
+            hover:shadow-md hover:scale-105 active:scale-100"
+            onClick={() => setInputVal("London")}
+          />
         </div>
 
         <div className="flex items-center justify-end text-white">
@@ -97,13 +103,13 @@ function Header(props) {
               editableDateInputs={true}
             />
             <div className="flex bg-white border-b">
-              <span className="text-2xl ml-4 flex-grow font-semibold">
+              <span className="text-lg ml-auto mr-5 mt-1 font-semibold">
                 Number Of Guests
               </span>
-              <UsersIcon className="h-5 mt-2 mr-2" />
+              <UsersIcon className="h-5 mt-2 mr-2 mb-1" />
               <input
                 type="number"
-                className="bg-gray-100 focus:bg-red-100 outline-none w-16 px-2"
+                className="bg-gray-100 focus:bg-red-100 outline-none mr-auto mt-1 mb-1 w-16 px-2"
                 placeholder="###"
                 value={guests}
                 min={1}
@@ -112,7 +118,7 @@ function Header(props) {
             </div>
             <div className="flex justify-center space-x-4 bg-white py-3 rounded-bl-lg rounded-br-lg">
               <button className="rounded bg-red-100 p-1 hover:shadow-md hover:scale-105 active:scale-100" onClick={() => setInputVal("")}>Close</button>
-              <button className="rounded bg-red-400 p-1 hover:shadow-md hover:scale-105 active:scale-100" onClick={(e) => search()}>Search</button>
+              <button className="rounded bg-red-400 p-1 text-white hover:shadow-md hover:scale-105 active:scale-100" onClick={(e) => search()}>Search</button>
             </div>
           </div>
         </div>

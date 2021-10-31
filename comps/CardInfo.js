@@ -13,9 +13,13 @@ function CardInfo(props) {
 
   let btnHeart;
   if (heart)
-    btnHeart = <HeartIcon className="cursor-pointer h-7 text-red-500" onClick={toggleHeart} />
+    btnHeart = <HeartIcon className="cursor-pointer h-7 text-red-500
+    hover:scale-105 hover:text-red-600 active:scale-100"
+    onClick={toggleHeart} />
   else
-    btnHeart = <HeartIcon className="cursor-pointer h-7 text-gray-300" onClick={toggleHeart} />
+    btnHeart = <HeartIcon className="cursor-pointer h-7 text-gray-300
+    hover:scale-105 hover:text-gray-400 active:scale-100"
+    onClick={toggleHeart} />
 
   return (
     <div
