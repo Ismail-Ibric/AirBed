@@ -3,7 +3,7 @@ import Head from "next/head";
 function HtmlHead() {
   return (
     <Head>
-      <title>Sleep Inns</title>
+      <title>AirSuites</title>
       <link rel="icon" href="/favicon.ico" />
       <link
         href="//db.onlinewebfonts.com/c/fa6fb08b2ef2e7c6c1cb626ff35fe3f0?family=Last+to+sleep"

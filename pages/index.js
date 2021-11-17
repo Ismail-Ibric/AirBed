@@ -76,7 +76,8 @@ export default function Home(props) {
 export async function getStaticProps(context) {
   const { req, query, res, asPath, pathname } = context;
 
-  let host = "http://localhost:3000";
+  //let host = "http://localhost:3000/";
+  let host = "https://izzys.work/json";
 
   if (req)
     host = req.headers.host

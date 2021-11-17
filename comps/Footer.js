@@ -9,11 +9,11 @@ function Footer() {
     <div className="flex justify-evenly items-start flex-wrap bg-gray-200 text-gray-500 p-8 space-y-4">
       <div className="space-y-4 text-xs mt-4">
         <h5 className="font-bold">ABOUT</h5>
-        <p>SLEEP Inn's Workings</p>
+        <p>AirSuites's Workings</p>
         <p>Newsroom</p>
         <p>Investors</p>
-        <p>SLEEP Inn's Plus</p>
-        <p>SLEEP Inn's Luxe</p>
+        <p>AirSuites's Plus</p>
+        <p>AirSuites's Luxe</p>
       </div>
 
       {/* <div className="space-y-4 text-xs">
