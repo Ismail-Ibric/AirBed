@@ -276,7 +276,7 @@ function Search(props) {
               <span className="whitespace-nowrap">
                 <span className="mr-2">Country:</span>
                 <input
-                  className="p-1 mr-4 border border-red-300 w-[180px]"
+                  className="p-1 mr-4 border border-red-300 w-[180px] disabled"
                   type="text"
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
