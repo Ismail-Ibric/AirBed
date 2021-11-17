@@ -1,0 +1,42 @@
+[
+  {
+    "img": "https://cdn-icons-png.flaticon.com/512/2647/2647250.png",
+    "location": "San Francisco",
+    "distance": "California"
+  },
+  {
+    "img": "https://cdn-icons-png.flaticon.com/128/1861/1861339.png",
+    "location": "Los Angeles",
+    "distance": "California"
+  },
+  {
+    "img": "https://cdn-icons-png.flaticon.com/128/2166/2166350.png",
+    "location": "Washington",
+    "distance": "D.C."
+  },
+  {
+    "img": "https://a0.muscache.com/im/pictures/f7736f4a-f8b9-4527-b46c-d0d8df856984.jpg?im_w=240",
+    "location": "Portland",
+    "distance": "Oregon"
+  },
+  {
+    "img": "https://cdn-icons-png.flaticon.com/128/1221/1221993.png",
+    "location": "Denver",
+    "distance": "Colorado"
+  },
+  {
+    "img": "https://cdn-icons-png.flaticon.com/128/2942/2942149.png",
+    "location": "Astin",
+    "distance": "Texas"
+  },
+  {
+    "img": "https://cdn-icons-png.flaticon.com/128/746/746773.png",
+    "location": "Chicago",
+    "distance": "Illinois"
+  },
+  {
+    "img": "https://cdn-icons-png.flaticon.com/128/1232/1232278.png",
+    "location": "Las Vegas",
+    "distance": "Nevada"
+  }
+]

@@ -44,14 +44,13 @@ function Header(props) {
 
   return (
     <div className="sticky top-0 w-full h-14 z-50 -mb-14">
-      <header className="relative flex shadow-md py-2 px-2">
-        <div className="absolute top-0 left-0 z-n100 w-full h-14 bg-black opacity-40"></div>
-        {/* <img className="absolute z-n100 w-full h-full bg-stars opacity-25" /> */}
-        <div className="flex item-center h-10 w-15 pr-1 my-auto"
+      <header className="relative flex h-14 shadow-md py-2 px-2">
+        <div className="absolute top-0 left-0 z-n100 w-full h-14 bg-black opacity-60"></div>
+        <div className="flex item-center pr-1 mr-1 my-auto min-w-[40px]"
           onClick={(e) => router.push("/")}>
           <Image
-            className="cursor-pointer hover:scale-102 active:scale-100"
-            src="/SleepInns-Opt.svg"
+            className="cursor-pointer rounded-md hover:scale-102 active:scale-100"
+            src="/airBnB.svg"
             //layout="fill"
             //objectFit="contain"
             //objectPosition="left"
@@ -77,11 +76,19 @@ function Header(props) {
         </div>
 
         <div className="flex items-center justify-end text-white">
-          <div className="flex space-x-1 mr-3">
-            <span className="hidden md:inline">Become a Host</span>
-            <GlobeAltIcon className="h-6 mr-1" />
+          <div className="flex space-x-1 mr-1 hidden md:flex">
+            <span className="mr-2 hover:scale-102 active:scale-100">
+              <a className="text-shadow-md hover:text-shadow-xl"
+                href="/hosting">
+                <div className="leading-3 mb-1">Become</div>
+                <div className="leading-3 ml-0">a Host</div>
+              </a>
+            </span>
+            <div className="" title="In Development">
+              <GlobeAltIcon className="h-6 mt-1 mr-1 hover:scale-105 active:scale-100 cursor-pointer" />
+            </div>
           </div>
-          <div className="flex space-x-1 border-2 p-1 rounded-md">
+          <div className="flex space-x-1 border-2 p-1 ml-2 rounded-md">
             <UserCircleIcon className="h-6" />
             <MenuIcon className="h-6" />
           </div>
@@ -118,7 +125,7 @@ function Header(props) {
             </div>
             <div className="flex justify-center space-x-4 bg-white py-3 rounded-bl-lg rounded-br-lg">
               <button className="rounded bg-red-100 p-1 hover:shadow-md hover:scale-105 active:scale-100" onClick={() => setInputVal("")}>Close</button>
-              <button className="rounded bg-red-400 p-1 text-white hover:shadow-md hover:scale-105 active:scale-100" onClick={(e) => search()}>Search</button>
+              <button className="rounded bg-red-400 p-1 text-white hover:shadow-md hover:scale-105 active:scale-100" onClick={(e) => {search(); setInputVal("")}}>Search</button>
             </div>
           </div>
         </div>

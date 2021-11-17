@@ -15,13 +15,13 @@ function CardLrg(props) {
       </div>
 
       <div className="absolute top-12 left-12 bg-white
-        bg-opacity-30 rounded-lg p-6">
-        <h3 className="text-4xl mb-3 w-64">{title}</h3>
+        bg-opacity-60 rounded-lg p-6">
+        <h3 className="font-nukab text-4xl mb-3 w-64 text-shadow-xl">{title}</h3>
         <p>{description}</p>
         <button className="text-sm text-white bg-red-400 px-4 py-2
           rounded-lg mt-5 hover:shadow-md hover:scale-105
-          active:scale-100">
-          {buttonText}
+          active:scale-100" title="In Development">
+          <span className="text-shadow-xl">{buttonText}</span>
         </button>
       </div>
     </section>

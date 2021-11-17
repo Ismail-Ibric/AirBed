@@ -3,12 +3,14 @@ import { useState } from "react"
 import getCenter from "geolib/es/getCenter"
 
 function Map(props) {
-  const { searchResults } = props;
+  const { data, from } = props;
+  const mapFrom = from();
+  const mapData = data.slice(mapFrom, mapFrom+5);
   const [selectedLoc, setSelectedLoc] = useState({});
-  
-  const locs = searchResults.map(result => ({
-    longitude: result.long,
-    latitude: result.lat,
+
+  const locs = mapData.map(result => ({
+    latitude: result.geometry.coordinates[1],
+    longitude: result.geometry.coordinates[0],
   }) );
   
   const mapCenter = getCenter(locs);
@@ -27,11 +29,11 @@ function Map(props) {
     {...viewport}
     onViewportChange={(nextViewport) => setViewport(nextViewport)}
   >
-    {searchResults.map((result, key) => (
+    {mapData.map((result, key) => (
       <div key={key}>
         <Marker
-          longitude={result.long}
-          latitude={result.lat}
+          latitude={result.geometry.coordinates[1]}
+          longitude={result.geometry.coordinates[0]}
           offsetLeft={-20}
           offsetTop={-10}
         >
@@ -43,15 +45,15 @@ function Map(props) {
           >&#x1F4CD;</p>
         </Marker>
 
-        {selectedLoc.long === result.long ? (
+        {selectedLoc?.geometry?.coordinates[0] === result.geometry.coordinates[0] ? (
           <Popup
             className="z-10"
             onClose={() => setSelectedLoc({})}
             closeOnClick={true}
-            latitude={result.lat}
-            longitude={result.long}
+            latitude={result.geometry.coordinates[1]}
+            longitude={result.geometry.coordinates[0]}
           >
-            {result.title}
+            {result.fields.name}
           </Popup>
         ):(
           false

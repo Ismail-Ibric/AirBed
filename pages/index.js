@@ -1,4 +1,4 @@
-import Head from "next/head";
+import HtmlHead from "../comps/HtmlHead";
 import Header from "../comps/Header";
 import Footer from "../comps/Footer";
 import Banner from "../comps/Banner";
@@ -11,43 +11,19 @@ export default function Home(props) {
 
   return (
     <div>
-      <Head>
-        <title>Sleep Inns</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="//db.onlinewebfonts.com/c/fa6fb08b2ef2e7c6c1cb626ff35fe3f0?family=Last+to+sleep"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link
-          href="//db.onlinewebfonts.com/c/0801c08e5412f54e4b4e9ad146d83a12?family=Ink+Free"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link
-          href="//db.onlinewebfonts.com/c/96996b95c19ecf8733387b6c0b2311e3?family=Rossetti"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link
-          href="//db.onlinewebfonts.com/c/02408ccd8efcf169db4e41d6e0551118?family=NeueKabelW01-Regular"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link
-          href="//db.onlinewebfonts.com/c/1412bea64d9ba801365a8a4b8c6ee782?family=BlogScriptW00-Regular"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <HtmlHead />
       <Header />
-      <Banner />
+      <Banner
+        img="/gg-bridge2.jpeg"
+        msg="Let's explore destinations nearby to stay at..."
+        btn="Explore Near Me"
+        goto="/search"
+      />
       <main className="max-w-7xl mx-auto px-4 sm:px-8">
-        <section className="mt-4">
+        <section className="mt-6">
           <div className="flex justify-center">
-            <span className="font-sleep text-4xl font-semibold">
-              Explore Nearby
+            <span className="font-nukab text-4xl font-semibold">
+              US Destinations
             </span>
           </div>
           <span
@@ -65,9 +41,9 @@ export default function Home(props) {
           </span>
         </section>
 
-        <section className="mt-4">
+        <section className="mt-6">
           <div className="flex justify-center mb-2">
-            <span className="font-sleep text-4xl font-semibold">
+            <span className="font-nukab text-4xl font-semibold">
               Stay Anywhere
             </span>
           </div>
@@ -82,25 +58,33 @@ export default function Home(props) {
           </div>
         </section>
 
-        <CardLrg
-          img="https://links.papareact.com/4cj"
-          title="The Great Outdoors"
-          description="Wishlist curated by AirBnB"
-          buttonText="Get Some Rest"
-        />
-        
+        <section className="my-12">
+          <CardLrg
+            img="/forest01.jpg"
+            title="The Great Outdoors"
+            description="Wishlist curated by AirBnB"
+            buttonText="Get Some Rest"
+          />
+        </section>
+
       </main>
       <Footer />
     </div>
   );
 }
 
-export async function getStaticProps() {
-  const exploreData = await fetch("https://links.papareact.com/pyp").then(
-    (res) => res.json()
-  );
+export async function getStaticProps(context) {
+  const { req, query, res, asPath, pathname } = context;
 
-  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
+  let host = "http://localhost:3000";
+
+  if (req)
+    host = req.headers.host
+
+  const exploreData = await fetch( host + "/explore.json" )
+  .then( (res) => res.json() );
+
+  const cardsData = await fetch( host + "/abroad.json" ).then((res) =>
     res.json()
   );
 

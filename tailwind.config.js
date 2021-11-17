@@ -23,7 +23,8 @@ module.exports = {
     fontFamily: {
       'rosse': ['Rossetti'],
       'blogS': ['BlogScriptW00-Regular'],
-      'sleep': ['Last to sleep']
+      'sleep': ['Ink Free'],
+      'nukab': ['NeueKabelW01-Regular']
     }
   },
   variants: {
