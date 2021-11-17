@@ -1,6 +1,18 @@
 @tailwind components;
 
 @layer components {
+
+  @font-face {
+    font-family: "NeueKabelW01-Regular";
+    src: url("https://db.onlinewebfonts.com/t/02408ccd8efcf169db4e41d6e0551118.eot");
+    src:
+      url("https://db.onlinewebfonts.com/t/02408ccd8efcf169db4e41d6e0551118.eot?#iefix") format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/02408ccd8efcf169db4e41d6e0551118.woff2") format("woff2"),
+      url("https://db.onlinewebfonts.com/t/02408ccd8efcf169db4e41d6e0551118.woff") format("woff"),
+      url("https://db.onlinewebfonts.com/t/02408ccd8efcf169db4e41d6e0551118.ttf") format("truetype"),
+      url("https://db.onlinewebfonts.com/t/02408ccd8efcf169db4e41d6e0551118.svg#NeueKabelW01-Regular") format("svg");
+  }
+
   .button {
     @apply rounded-tl-lg rounded-tr-lg 
     px-4 py-2 cursor-pointer hover:shadow-lg 
