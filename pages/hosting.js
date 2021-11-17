@@ -103,7 +103,7 @@ function Hosting() {
 
         <section className="w-full mt-8 mb-16 text-center">
           <div className="font-nukab text-2xl">
-            Turn your extra space into extra income on AirSuites.
+            Turn your extra space into extra income on AirBed's.
           </div>
           <button className="bg-red-200 w-[160px] p-3 mt-6 rounded-lg">Try Hosting Now</button>
         </section>

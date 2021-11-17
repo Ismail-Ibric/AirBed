@@ -25,14 +25,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="24.162941"
-     inkscape:cy="12.726428"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="23.573595"
+     inkscape:cy="8.3409868"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1043"
+     inkscape:window-width="1097"
      inkscape:window-height="1048"
      inkscape:window-x="-7"
      inkscape:window-y="0"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -60,30 +60,30 @@
        width="12.7"
        height="12.7"
        x="6.9388939e-18"
-       y="284.29999" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:14.00099659px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#b63333;fill-opacity:1;stroke:none;stroke-width:0.35002494;"
-       x="0.37883374"
-       y="251.1013"
-       id="text4520"
-       transform="scale(0.86020085,1.1625192)"><tspan
-         sodipodi:role="line"
-         id="tspan4518"
-         x="0.37883374"
-         y="251.1013"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111126px;font-family:'Segoe Print';-inkscape-font-specification:'Segoe Print';fill:#b63333;fill-opacity:1;stroke-width:0.35002494;">AIR</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.35563374px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#4c0000;fill-opacity:1;stroke:none;stroke-width:0.25889084;"
-       x="0.12877503"
-       y="289.83347"
-       id="text4524"
-       transform="scale(0.97848508,1.021988)"><tspan
-         sodipodi:role="line"
-         id="tspan4522"
-         x="0.12877503"
-         y="289.83347"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.45187783px;font-family:'MV Boli';-inkscape-font-specification:'MV Boli';fill:#4c0000;fill-opacity:1;stroke-width:0.25889084;">SUITES</tspan></text>
+       y="300.17496" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.25231224px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0.76939324,290.27113 -0.0675836,6.3078 1.14892166,0.0225 v -0.85606 h 9.2139027 l 0.04506,0.76595 0.923643,0.0225 0.09011,-4.61821 -1.058811,0.045 -0.09011,2.43301 -9.1237918,-0.0676 0.180223,-4.05502 z"
+       id="path1433"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1.9411891,294.66308 c 0,0 -0.064874,-0.78442 0.2598506,-1.18113 0.382361,-0.26255 0.7197915,-0.25552 1.0394345,-0.14176 0.6008448,0.1813 0.6098835,0.80645 0.7323288,1.34654 z"
+       id="path1435"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 3.972803,294.68673 c 0.1937106,-0.52646 0.2650631,-1.14032 0.8740701,-1.37014 l 3.1186796,0.17742 2.1021163,-0.2011 c 0.627817,0.30495 0.730495,0.89986 0.944949,1.44102 z"
+       id="path1437"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ff6a6a;stroke-width:0.92084914;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 6.7731472,285.13468 c -1.2692635,0.0523 -5.6972808,5.11563 -5.3977933,7.27927 0.1788464,1.29206 5.7820628,-2.38458 6.1523237,-2.94082 0.5430288,-0.81581 -0.2824507,-1.34004 -0.8415915,-1.3394 -0.7086304,8.1e-4 -1.5158598,0.72053 -1.0157138,1.3394 0.5277919,0.65309 5.3090807,4.10872 5.7750577,3.11553 0.549679,-1.1716 -3.5478829,-7.50029 -4.6722828,-7.45398 z"
+       id="path1759"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss" />
   </g>
 </svg>

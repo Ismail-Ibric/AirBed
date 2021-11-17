@@ -56,6 +56,7 @@ function Header(props) {
             //objectPosition="left"
             width="40px"
             height="40px"
+            title="AirBed"
           />
         </div>
 
