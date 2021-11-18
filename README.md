@@ -10,13 +10,14 @@ Frameworks/Libraries used are
 
 - React
   - 
-  - Actual AirBnB listings from 3rd party API
-  - Location Maps w/ MapBox
-  - Tailwind CSS w/ styles added to tailwind.config.js
+  - Actual AirBnB listings using 3rd party API
+  - MapBox location pins on Map for all rentals
+  - Tailwind CSS, with new styles in tailwind.config.js
+  - Responsive page layouts with simle Tailwind tags
   - ...
 - Next.js
   -
-  - SG w/ getStaticProps()
-  - SSR w/ getServerSideProps()
-  - &lt;Image/&gt; used for data optimization
+  - Static Generation used w/ getStaticProps()
+  - SSR used w/ getServerSideProps()
+  - &lt;Image /&gt; used for optimized loading
   - ...
