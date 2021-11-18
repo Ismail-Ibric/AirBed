@@ -27,7 +27,6 @@ function Hosting() {
         img="/sleep01.jpg"
         msg="You can host anything... anywhere"
         btn="Learn More"
-        goto=""
       />
       <main className="flex flex-wrap pt-6 px-4 sm:px-8 justify-center">
         
@@ -91,10 +90,14 @@ function Hosting() {
             transform -translate-x-1/2 -translate-y-1/2 p-3 rounded-xl">
             <div className="absolute z-n100 bg-white w-full h-full opacity-60 rounded-xl" />
             <div className="mt-5 ml-5 text-lg">
-              Questions about hosting? <br/>Ask a Superhost.
+              Questions about hosting? <br/> Ask a Superhost.
             </div>
             <div className="w-full ml-5 mt-5 mb-2">
-              <a className="bg-red-200 p-3 rounded-xl" href="/askahost">Learn more</a>
+              <button className="bg-red-200 p-3 rounded-xl shadow-lg
+                hover:scale-105 active:scale-100 transition duration-100"
+                title="In Development">
+                Learn more
+              </button>
             </div>
           </div>
         </div>
@@ -105,7 +108,11 @@ function Hosting() {
           <div className="font-nukab text-2xl">
             Turn your extra space into extra income on AirBed's.
           </div>
-          <button className="bg-red-200 w-[160px] p-3 mt-6 rounded-lg">Try Hosting Now</button>
+          <button className="bg-red-200 w-[160px] p-3 mt-6 rounded-lg shadow-lg
+            hover:scale-105 active:scale-100 transition duration-100"
+            title="In Development">
+            Try Hosting Now
+          </button>
         </section>
 
       </main>

@@ -24,9 +24,14 @@ function Banner(props) {
         <button className="absolute z-20 bottom-3 left-16 bg-red-400
           shadow-2xl hover:scale-105 active:scale-100
           transition duration-100 text-white font-bold py-2 px-4 rounded-xl w-40">
-          <a href={goto} className="text-shadow-lg">
-            {btn}
-          </a>
+          {goto ?
+            <a href={goto} className="text-shadow-lg">
+              {btn}
+            </a> :
+            <span title="In Development">
+              {btn}
+            </span>
+          }
         </button>
       </div>
     </div>
