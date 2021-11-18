@@ -246,10 +246,10 @@ function Search(props) {
           <div className="m-2 mt-3 flex-grow w-full">
             <div className="hidden lg:inline-flex space-x-3">
               <p className="button-plain bg-gray-200">Location</p>
-              <p className="button bg-gray-300" title="Not Implemented Yet">Price</p>
-              <p className="button bg-gray-300" title="Not Implemented Yet">Rooms and Beds</p>
-              <p className="button bg-gray-300" title="Not Implemented Yet">Ease of Canceling</p>
-              <p className="button bg-gray-300" title="Not Implemented Yet">More...</p>
+              <p className="button bg-gray-300" title="In Development">Price</p>
+              <p className="button bg-gray-300" title="In Development">Rooms and Beds</p>
+              <p className="button bg-gray-300" title="In Development">Ease of Canceling</p>
+              <p className="button bg-gray-300" title="In Development">More...</p>
             </div>
 
             <div className="bg-gray-200 p-4 pt-1 space-y-3 mb-4 mr-2 rounded-xl lg:rounded-tl-none">
@@ -281,6 +281,7 @@ function Search(props) {
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
                   disabled
+                  title="In Development"
                 />
                 {/* list="countries" */}
                 {/* <datalist id="countries">

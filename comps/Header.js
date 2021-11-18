@@ -89,7 +89,7 @@ function Header(props) {
               <GlobeAltIcon className="h-6 mt-1 mr-1 hover:scale-105 active:scale-100 cursor-pointer" />
             </div>
           </div>
-          <div className="flex space-x-1 border-2 p-1 ml-2 rounded-md">
+          <div className="flex space-x-1 border-2 p-1 ml-2 rounded-md" title="In Development">
             <UserCircleIcon className="h-6" />
             <MenuIcon className="h-6" />
           </div>
